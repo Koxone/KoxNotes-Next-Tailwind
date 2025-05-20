@@ -1,117 +1,129 @@
-# KoxNotes - React + Tailwind Note-Taking App
+# KoxNotes - Next.js + Firebase + Tailwind Note-Taking App
 
-KoxNotes is a modern note-taking and organization application built with React, Vite, and Tailwind CSS.
+KoxNotes is a modern and responsive note-taking application built with Next.js, Firebase Authentication, and Tailwind CSS.
 
-## Features
+## 🚀 Features
 
 - 📝 Create, edit, and delete notes
 - 🔍 Search and filter notes
-- 🔐 User authentication (login/register)
-- 💾 Local storage persistence
-- 🎨 Clean, responsive UI with Tailwind CSS
-- ✨ Interactive UI with animations
-- 🛡️ Protected routes for authenticated users
+- 🔐 User authentication with Firebase (email/password and Google login)
+- 🌈 Responsive and clean UI using Tailwind CSS
+- 💾 Data persistence through Firebase backend
+- 🧠 Authentication state management
+- ☁️ Firebase Hosting deployment
 
-## 🚀 Technologies
+## 🛠️ Technologies Used
 
-- **⚛️ React** - JavaScript library for building user interfaces
-- **⚡ Vite** - Ultra-fast build tool for modern development
-- **🌊 Tailwind CSS** - Utility-first CSS framework for rapid design
-- **LocalStorage** - Browser-based persistent storage
+- **Next.js** - React framework for production
+- **Firebase** - Backend services (Authentication, Hosting)
+- **Tailwind CSS** - Utility-first CSS framework
+- **React** - JavaScript library for building UIs
 
-## 🔧 Installation
+## 📦 Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Koxone/KoxNotes-React-Tailwind.git
-   cd KoxNotes-React-Tailwind
+   git clone https://github.com/Koxone/KoxNotes-Next-Tailwind.git
+   cd KoxNotes-Next-Tailwind
    ```
 
-2. Install dependencies:
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. Start the development server:
+3. **Add your Firebase configuration:**
+   - Create a file at `src/firebase/config.js`
+   - Paste your Firebase configuration and export the `auth` object:
+     ```js
+     import { initializeApp } from "firebase/app";
+     import { getAuth } from "firebase/auth";
+
+     const firebaseConfig = {
+       apiKey: "YOUR_API_KEY",
+       authDomain: "YOUR_PROJECT.firebaseapp.com",
+       projectId: "YOUR_PROJECT_ID",
+       storageBucket: "YOUR_PROJECT.appspot.com",
+       messagingSenderId: "YOUR_SENDER_ID",
+       appId: "YOUR_APP_ID"
+     };
+
+     const app = initializeApp(firebaseConfig);
+     export const auth = getAuth(app);
+     ```
+
+4. **Run development server:**
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+5. **Open in browser:**
+   ```
+   http://localhost:3000
+   ```
 
-## 📁 Project Structure
+## 🔐 Authentication
+
+- **Email and password registration/login**
+- **Google login using Firebase `signInWithPopup()`**
+
+## 📁 Folder Structure
 
 ```
-KoxNotes-React-Tailwind/
+KoxNotes-Next-Tailwind/
 ├── src/
-│   ├── assets/          # Images, icons, and other static resources
-│   ├── components/      # Reusable components
-│   │   ├── layout/      # Structure components (Header, Sidebar, etc.)
-│   │   ├── notes/       # Note-specific components
-│   │   └── ui/          # Generic UI components
-│   ├── contexts/        # React contexts for state management
-│   ├── hooks/           # Custom hooks
-│   ├── pages/           # Page components
-│   ├── services/        # Services for data operations
-│   ├── utils/           # Utility functions
-│   ├── App.jsx          # Main component
-│   ├── index.css        # Global styles and Tailwind directives
-│   └── main.jsx         # Application entry point
-├── public/              # Public files
-├── index.html           # Main HTML file
-├── tailwind.config.js   # Tailwind CSS configuration
-├── postcss.config.js    # PostCSS configuration
-├── vite.config.js       # Vite configuration
-└── package.json         # Dependencies and scripts
+│   ├── app/              # Application routes (Next.js app directory)
+│   ├── components/       # UI components (buttons, inputs, logos, etc.)
+│   ├── firebase/         # Firebase configuration
+│   └── styles/           # Global styles
+├── public/               # Static assets
+├── .firebaserc           # Firebase project configuration
+├── firebase.json         # Firebase hosting settings
+├── tailwind.config.js    # Tailwind CSS config
+├── postcss.config.js     # PostCSS config
+└── package.json          # Project metadata and dependencies
 ```
 
-## 🧩 Main Components
+## 🌐 Deployment with Firebase Hosting
 
-### NoteList
-Displays the list of notes with filtering and search options.
+1. **Install Firebase CLI:**
+   ```bash
+   npm install -g firebase-tools
+   ```
 
-### NoteEditor
-Interactive editor for creating and modifying formatted notes.
+2. **Login to Firebase:**
+   ```bash
+   firebase login
+   ```
 
-### TagManager
-Manages tags for organizing notes.
+3. **Initialize Firebase in the project:**
+   ```bash
+   firebase init
+   ```
+   - Select `Hosting` and link your Firebase project
+   - Set `out` as the public directory
+   - Enable single-page app rewrite
+   - Skip GitHub deployment if not needed
 
-### ThemeToggle
-Allows switching between light and dark modes.
+4. **Build the project:**
+   ```bash
+   npm run build
+   ```
 
-## 💡 Implemented Best Practices
+5. **Deploy to Firebase:**
+   ```bash
+   firebase deploy
+   ```
 
-- **Modular Components**: Each component has a single responsibility
-- **Optimized Tailwind**: Consistent use of components and classes
-- **State Management**: Efficient implementation with Context API
-- **Responsive Design**: Adaptable layout for all devices
-- **Accessibility**: Enhanced controls and navigation for accessibility
+6. **Your app will be live at:**
+   ```
+   https://your-project-name.web.app
+   ```
 
-## 🛠️ Developed With
-
-- **VS Code** - Code editor
-- **Heroicons** - Beautiful and consistent SVG icons
-- **ESLint** - Code linting for consistency
-- **Prettier** - Code formatting
-
-## 🔜 Upcoming Features
-
-- Cloud synchronization
-- Advanced Markdown support
-- Real-time collaboration
-- Export to different formats (PDF, HTML, etc.)
-- Integrated reminders and calendar
-
-## 📚 Resources
-
-- [React Documentation](https://reactjs.org/docs/getting-started.html)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Guide](https://vitejs.dev/guide/)
-
-## 📝 License
-
-This project is licensed under the MIT License - see the `LICENSE` file for details.
-
----
+## ✨ Credits
 
 Developed with ❤️ by [Koxone](https://github.com/Koxone)
+
+## 📄 License
+
+This project is licensed under the MIT License.
