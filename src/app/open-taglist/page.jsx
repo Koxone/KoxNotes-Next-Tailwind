@@ -1,9 +1,9 @@
 import React from "react";
-import Empty from "@/components/ui/modals/Empty";
+// import Empty from "@/components/ui/modals/Empty";
 import MainTagsTitle from "@/components/ui/text/main/MainTagsTitle";
 import GoBackButton from "@/components/ui/buttons/GoBackButton";
 import MainTitle from "@/components/ui/text/main/MainTitle";
-import AllNotesContainer from "./AllNotesContainer";
+import AllNotesContainer from "@/components/ui/containers/AllNotesContainer";
 import Header from "@/components/ui/header/Header";
 import NavBar from "@/components/ui/nav/NavBar";
 
