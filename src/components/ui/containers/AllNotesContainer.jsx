@@ -2,12 +2,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import CloseNote from "@/components/ui/cards/CloseNote";
-import { getUserNotes } from "../../../utils/getUserNotes";
+import { getUserNotes } from "@/utils/getUserNotes.jsx";
 
 export default function AllNotesContainer({ context = 'home' }) {
   const [notes, setNotes] = useState([]);
 
-  // Cargar notas una sola vez cuando el componente se monta
   useEffect(() => {
     async function loadNotes() {
       const userNotes = await getUserNotes();
