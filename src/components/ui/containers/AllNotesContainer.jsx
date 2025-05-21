@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import CloseNote from "@/components/ui/cards/CloseNote";
-import { getUserNotes } from "@/utils/getUserNotes";
+import { getUserNotes } from "../../../utils/getUserNotes";
 
 export default function AllNotesContainer({ context = 'home' }) {
   const [notes, setNotes] = useState([]);
