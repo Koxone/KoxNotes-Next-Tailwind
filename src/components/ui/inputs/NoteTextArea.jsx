@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-function NoteTextArea() {
+function NoteTextArea({ value, onChange }) {
   return (
-    <div className=' w-full h-full text-white outline-none' contentEditable='true' suppressContentEditableWarning={true} spellCheck='false'>
-
-    </div>
-  )
+    <textarea
+      value={value}
+      onChange={onChange}
+      className="w-full h-screen resize-none break-words text-white outline-none overflow-x-hidden"
+    />
+  );
 }
 
-export default NoteTextArea
+export default NoteTextArea;

@@ -11,7 +11,7 @@ import NavBar from "@/components/ui/nav/NavBar";
 
 function ResetPasswordScreen({ className = "" }) {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col justify-center items-center overflow-hidden">
       <Header />
       <div
         className={`${className} bg-neutral-950 w-full h-screen rounded-2xl py-12 px-4 flex flex-col items-center gap-4`}

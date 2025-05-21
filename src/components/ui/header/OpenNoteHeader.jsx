@@ -5,9 +5,10 @@ import ArchiveButton from "../buttons/ArchiveButton";
 import CancelButton from "../buttons/CancelButton";
 import SaveNoteButton from "../buttons/SaveNoteButton";
 import GoBackButton from "../buttons/GoBackButton";
+
 import { useRouter } from "next/navigation";
 
-function OpenNoteHeader() {
+function OpenNoteHeader({ onSave }) {
   const router = useRouter();
 
   const goTo = () => {
@@ -15,12 +16,12 @@ function OpenNoteHeader() {
   };
 
   return (
-    <div className="flex items-center w-full pb-4.5 pt-3.5 border-b border-neutral-700 sticky top-[59px] bg-neutral-950">
+    <div className="flex py-3 w-full sticky top-0 px-4 border-b border-neutral-800 mb-3">
       <GoBackButton styles="mr-[60px]" goTo={goTo} icon="arrow-left" mode="darkMode" />
       <DeleteButton icon="delete" mode="darkMode" styles="mr-[16px]" />
       <ArchiveButton icon="archive" mode="darkMode" styles="mr-[16px]" />
       <CancelButton styles="mr-[32px]" />
-      <SaveNoteButton />
+      <SaveNoteButton onClick={onSave} onSuccess={() => router.back()} />
     </div>
   );
 }

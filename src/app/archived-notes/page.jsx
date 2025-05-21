@@ -5,9 +5,9 @@ import Header from "@/components/ui/header/Header";
 
 function ArchivedNotesScreen() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col justify-center items-center">
       <Header />
-      <div className="w-full h-screen p-4 flex flex-col justify-center items-center gap-4 overflow-hidden rounded-2xl bg-neutral-950">
+      <div className="w-full h-full p-4 flex flex-col justify-center items-center gap-4 overflow-hidden rounded-2xl bg-neutral-950">
         <MainTitle
           text="Archived Notes"
           styles="text-white mb-3"

@@ -9,7 +9,7 @@ import NavBar from "@/components/ui/nav/NavBar";
 
 function ChangePasswordScreen() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col justify-center items-center overflow-hidden">
       <Header />
       <div className="w-full h-screen py-6 px-4 flex flex-col gap-3.5 rounded-2xl bg-neutral-950">
         <GoBackButton icon="arrow-left" mode="darkMode" />

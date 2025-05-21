@@ -8,20 +8,24 @@ import NavBar from "@/components/ui/nav/NavBar";
 
 function OpenNoteScreen() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col overflow-hidden gap-2">
       <Header />
-      <div className="w-full h-screen pr-4 pl-4 pb-4 flex flex-col justify-center items-center gap-4 rounded-2xl bg-neutral-950">
-        <OpenNoteHeader />
+      <OpenNoteHeader />
+      <div className="px-3">
         <MainTitle text="React Performance Optimization" styles="text-white" />
+      </div>
+      <div className="px-3">
         <OpenNoteInfoCard
-          icon="tag"
-          mode="darkMode"
-          date="16 May 2025"
-          tags1="Dev"
-          tag2="React"
-          text1="Tags"
-          text2="Last Edited"
-        />
+        icon="tag"
+        mode="darkMode"
+        date="16 May 2025"
+        tags1="Dev"
+        tag2="React"
+        text1="Tags"
+        text2="Last Edited"
+      />
+      </div>
+      <div className="overflow-y-auto px-3">
         <NoteTextArea />
       </div>
       <NavBar />

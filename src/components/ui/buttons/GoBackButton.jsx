@@ -8,7 +8,7 @@ function GoBackButton({ icon = "arrow", mode = "darkMode", styles = "", text = "
   return (
     <button
       onClick={() => router.back()}
-      className={`${styles} flex items-center gap-2 text-sm text-white hover:underline`}
+      className={`${styles} flex items-center whitespace-nowrap gap-2 text-sm text-white hover:underline cursor-pointer`}
     >
       <img src={`/assets/images/icon-${icon}-${mode}.svg`} alt="icon" className="w-4 h-4" />
       {text}

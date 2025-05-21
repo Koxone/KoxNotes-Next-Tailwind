@@ -8,7 +8,7 @@ import NavBar from "@/components/ui/nav/NavBar";
 
 function SettingsOptionFontOpenScreen({}) {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col justify-center items-center overflow-hidden">
       <Header />
       <div className="flex flex-col gap-4 h-screen py-6 px-4 rounded-2xl bg-neutral-950">
         <GoBackButton text="Settings" icon="arrow-left"  mode="darkMode"/>

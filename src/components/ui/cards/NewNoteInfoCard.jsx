@@ -1,8 +1,9 @@
 import React from "react";
+import { saveNote } from "@/utils/SaveNote";
 
-function NewNoteInfoCard({ mode = "" }) {
+function NewNoteInfoCard({ mode = "", tagsText, onChange }) {
   return (
-    <div className="w-full flex flex-col items-start border-b border-neutral-700 pb-3.5 gap-3.5 mb-3">
+    <div className="w-full flex flex-col items-start border-b border-neutral-700 pb-3.5 gap-3.5 mb-3 px-4">
       <div className="top flex flex-row gap-20 justify-evenly items-center">
         <div className="flex flex-row gap-1.5 justify-center items-center">
           <img src={`/assets/images/icon-tag-${mode}.svg`} alt="icon" />
@@ -13,6 +14,9 @@ function NewNoteInfoCard({ mode = "" }) {
             className="text-white placeholder:text-neutral-400 
             placeholder:whitespace-pre-wrap placeholder:text-sm placeholder:leading-[130%] placeholder:font-normal outline-none h-14"
             type="text"
+            maxLength="20"
+            value={tagsText}
+            onChange={onChange}
             placeholder="Add tags separated by commas (e.g. Work, Planning)"
           />
         </div>
