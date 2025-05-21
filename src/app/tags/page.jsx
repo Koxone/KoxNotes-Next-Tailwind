@@ -12,6 +12,7 @@ function TagsListScreen() {
         <MainTitle text="Tags" styles="text-white mb-4" />
         <div className="w-full h-fit overflow-y-auto flex flex-col gap-1">
           {/* <Empty text='You don’t have any tags saved yet. Start a new note to capture your thoughts and ideas.'/> */}
+          {/* <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" />
@@ -112,8 +113,7 @@ function TagsListScreen() {
           <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
+          <CloseTagListCard mode="darkMode" text="Cooking" /> */}
         </div>
       </div>
       <NavBar />
