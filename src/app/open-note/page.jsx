@@ -8,11 +8,11 @@ import NavBar from "@/components/ui/nav/NavBar";
 
 function OpenNoteScreen() {
   return (
-    <div className="w-full h-screen flex flex-col overflow-hidden gap-2">
+    <div className="w-full h-screen flex flex-col overflow-hidden gap-2 bg-neutral-950 rounded-2xl">
       <Header />
       <OpenNoteHeader />
       <div className="px-3">
-        <MainTitle text="React Performance Optimization" styles="text-white" />
+        <MainTitle text="React Performance Optimization" styles="text-white ml-2" />
       </div>
       <div className="px-3">
         <OpenNoteInfoCard

@@ -79,40 +79,6 @@ function TagsListScreen() {
           <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
-          <CloseTagListCard mode="darkMode" text="Cooking" />
           <CloseTagListCard mode="darkMode" text="Cooking" /> */}
         </div>
       </div>

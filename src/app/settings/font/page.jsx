@@ -10,7 +10,7 @@ function SettingsOptionFontOpenScreen({}) {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center overflow-hidden">
       <Header />
-      <div className="flex flex-col gap-4 h-screen py-6 px-4 rounded-2xl bg-neutral-950">
+      <div className="flex flex-col gap-4 w-full h-screen py-6 px-4 rounded-2xl bg-neutral-950">
         <GoBackButton text="Settings" icon="arrow-left"  mode="darkMode"/>
         <MainTitle text="Font Theme" styles="text-neutral-50 font-bold text-2xl mt-4 mb-4" subtitle="Choose your font theme:" subtitleStyles="text-white" />
         <SettingsOptionCard

@@ -2,7 +2,7 @@ import React from "react";
 
 function OpenNoteInfoCard({ tags1 = "", tag2 = "", mode = "", styles = "", text1 = "", date = "", text2 = "" }) {
   return (
-    <div className="w-full flex flex-col items-start border-b border-neutral-700 pb-3.5 gap-3">
+    <div className="w-full flex flex-col ml-2 items-start border-b border-neutral-700 pb-3.5 gap-3">
       <div className="top flex flex-row gap-20 justify-evenly items-center">
         <div className="flex flex-row gap-1.5 justify-center items-center">
           <img src={`/assets/images/icon-tag-${mode}.svg`} alt="icon" />

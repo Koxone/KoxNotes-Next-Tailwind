@@ -2,6 +2,7 @@ import MainTitle from "@/components/ui/text/main/MainTitle";
 import CloseNote from "@/components/ui/cards/CloseNote";
 import NavBar from "@/components/ui/nav/NavBar";
 import Header from "@/components/ui/header/Header";
+import AllNotesContainer from "@/components/ui/containers/AllNotesContainer";
 
 function ArchivedNotesScreen() {
   return (
@@ -15,7 +16,7 @@ function ArchivedNotesScreen() {
           subtitleStyles="text-neutral-500"
         />
         <div className="w-full h-full flex flex-col overflow-y-auto">
-          <CloseNote title="React Performance Optimization" date="16 May 2025" />
+          <AllNotesContainer context="archive"/>
         </div>
       </div>
       <NavBar />

@@ -3,7 +3,7 @@ import React from "react";
 import Tag from "./Tag";
 import { useRouter } from "next/navigation";
 
-function CloseNote({ title = "", date = "", tags = [] }) {
+function CloseNote({ title = "", date = "", tags = [], id }) {
   const safeTags = Array.isArray(tags) ? tags : tags.split(",").map(t => t.trim());
   const router = useRouter();
 

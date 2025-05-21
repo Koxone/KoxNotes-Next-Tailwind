@@ -17,8 +17,11 @@ export default function NewNoteScreen() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [tagsText, setTagsText] = useState("");
+  const [id, setId] = useState("");
 
   const handleSaveNote = async () => {
+    const uniqueId = crypto.randomUUID();
+    setId(uniqueId);
     const tags = tagsText
       .split(",")
       .map((tag) => tag.trim())
@@ -35,11 +38,12 @@ export default function NewNoteScreen() {
       hour12: true,
     });
     try {
-      await saveNote(title, content, tags, dateText, timeText);
+      await saveNote(title, content, tags, dateText, timeText, uniqueId);
       alert("Note saved successfully!");
       setTitle("");
       setContent("");
       setTagsText("");
+      setId("");
     } catch (error) {
       alert("Error saving note:", +error.message);
       console.error("Error saving note:", error);
