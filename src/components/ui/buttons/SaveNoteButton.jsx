@@ -1,8 +1,8 @@
 function SaveNoteButton({ styles = "", onClick, onSuccess }) {
   const handleClick = async () => {
     try {
-      await onClick(); // Ejecuta la función que guarda la nota
-      if (onSuccess) onSuccess(); // Luego vuelve atrás
+      await onClick(); 
+      if (onSuccess) onSuccess(); 
     } catch (error) {
       console.error("Error saving note:", error);
       alert("Ocurrió un error al guardar la nota.");

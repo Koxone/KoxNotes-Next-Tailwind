@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import CloseNote from "@/components/ui/cards/CloseNote";
 import { getUserNotes } from "@/utils/getUserNotes";
+import UserCheck from "@/app/test/userCheck";
 
 export default function AllNotesContainer({ context = 'home' }) {
 
@@ -29,6 +30,7 @@ export default function AllNotesContainer({ context = 'home' }) {
 
   return (
     <div className="w-full h-full flex flex-col overflow-y-auto">
+      {/* <UserCheck /> */}
       {notes.length === 0 ? (
         <div className="w-full rounded-sm bg-neutral-800 flex justify-center items-center p-3">
           <p className="text-neutral-400 text-center text-sm leading-[130%]">

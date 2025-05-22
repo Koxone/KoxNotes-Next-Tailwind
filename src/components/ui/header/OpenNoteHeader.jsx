@@ -6,6 +6,8 @@ import CancelButton from "../buttons/CancelButton";
 import SaveNoteButton from "../buttons/SaveNoteButton";
 import GoBackButton from "../buttons/GoBackButton";
 
+import { deleteNote } from "@/utils/deleteNote";
+
 import { useRouter } from "next/navigation";
 
 function OpenNoteHeader({ onSave }) {
