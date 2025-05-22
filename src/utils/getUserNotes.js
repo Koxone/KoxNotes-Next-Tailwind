@@ -10,7 +10,7 @@ export async function getUserNotes() {
   const snapshot = await getDocs(q);
 
   return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
+    id: doc.id, 
+    ...doc.data(), 
   }));
 }

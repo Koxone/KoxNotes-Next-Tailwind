@@ -8,8 +8,9 @@ function CloseNote({ title = "", date = "", tags = [], id }) {
   const router = useRouter();
 
   const goTo = () => {
-    router.push("/open-note");
-  };
+  console.log("Navigating to note ID:", id);
+  router.push(`/open-note/${id}`);
+};
 
   return (
     <div onClick={goTo} className="w-full flex flex-col gap-3.5 p-2 border-b border-neutral-800 cursor-pointer">

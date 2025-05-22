@@ -1,20 +1,24 @@
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc } from "firebase/firestore";
 import { auth, db } from "@/firebase/config";
 
-export async function saveNote(title, content, tags = [], dateText, timeText, id) {
+export async function saveNote(title, content, tags = [], dateText, timeText) {
   const user = auth.currentUser;
   if (!user) throw new Error("User not authenticated");
 
-  const note = {
+  const noteData = {
     title,
     content,
     tags,
     userId: user.uid,
-    id,
     createdAt: new Date(),
     dateText,
     timeText,
     lastEdited: new Date(),
   };
-  await addDoc(collection(db, "notes"), note);
+
+  const docRef = await addDoc(collection(db, "notes"), noteData);
+
+  await updateDoc(docRef, { id: docRef.id });
+
+  return docRef.id;
 }
